@@ -8,6 +8,7 @@ import react from '@vitejs/plugin-react-swc';
 const PORT = 3039;
 
 export default defineConfig({
+  base:'/e-commerce_admin_dashboard/',
   plugins: [
     react(),
     checker({
@@ -22,7 +23,7 @@ export default defineConfig({
       },
     }),
   ],
-    base:'/',
+   
   resolve: {
     alias: [
       {
