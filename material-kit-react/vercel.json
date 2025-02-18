@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/"
+      "destination": "/e-commerce_admin_dashboard/"
     }
   ]
 }
