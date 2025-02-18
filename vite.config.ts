@@ -5,36 +5,9 @@ import react from '@vitejs/plugin-react-swc';
 
 // ----------------------------------------------------------------------
 
-const PORT = 8080;
 
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    checker({
-      typescript: true,
-      eslint: {
-        lintCommand: 'eslint "./src/**/*.{js,jsx,ts,tsx}"',
-        dev: { logLevel: ['error'] },
-      },
-      overlay: {
-        position: 'tl',
-        initialIsOpen: false,
-      },
-    }),
-  ],
-    base:'/',
-  resolve: {
-    alias: [
-      {
-        find: /^~(.+)/,
-        replacement: path.join(process.cwd(), 'node_modules/$1'),
-      },
-      {
-        find: /^src(.+)/,
-        replacement: path.join(process.cwd(), 'src/$1'),
-      },
-    ],
-  },
-  server: { port: PORT, host: true },
-  preview: { port: PORT, host: true },
-});
+  plugins: [react()],
+  base:'/e-commerce_admin_dashboard/'
+})
