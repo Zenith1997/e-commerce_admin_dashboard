@@ -43,7 +43,7 @@ export function Router() {
         </DashboardLayout>
       ),
       children: [
-        { element: <UserPage />, index: true },
+        { element: <HomePage />, index: true },
         { path: 'user', element: <UserPage /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
@@ -63,7 +63,7 @@ export function Router() {
     },
     {
       path: '*',
-      element: <Navigate to="/" replace />,
+      element: <Navigate to="/user" replace />,
     },
   ]);
 }
