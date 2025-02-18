@@ -43,7 +43,7 @@ export function Router() {
         </DashboardLayout>
       ),
       children: [
-     
+        { element: <HomePage />, index: true },
         { path: 'user', element: <UserPage /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
@@ -57,13 +57,13 @@ export function Router() {
         </AuthLayout>
       ),
     },
-    // {
-    //   path: '404',
-    //   element: <Page404 />,
-    // // },
-    // {
-    //   path: '*',
-    //   element: <Navigate to="/404" replace />,
-    // },
+    {
+      path: '404',
+      element: <Page404 />,
+    },
+    {
+      path: '*',
+      element: <Navigate to="/404" replace />,
+    },
   ]);
 }
