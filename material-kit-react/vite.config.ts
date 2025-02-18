@@ -22,7 +22,7 @@ export default defineConfig({
       },
     }),
   ],
-    base:'/janajaya_admin/',
+    base:'/e-commerce_admin_dashboard/',
   resolve: {
     alias: [
       {
