@@ -22,7 +22,7 @@ export default defineConfig({
       },
     }),
   ],
-    base:'/e-commerce_admin_dashboard/',
+    base:'/',
   resolve: {
     alias: [
       {
