@@ -9,7 +9,7 @@ const icon = (name: string) => (
 
 export const navData = [
   {
-    title: 'Orders',
+    title: 'Ordersss',
     path: '/',
     icon: icon('ic-orders'),
   },
