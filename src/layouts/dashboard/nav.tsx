@@ -21,14 +21,19 @@ import { WorkspacesPopover } from '../components/workspaces-popover';
 
 import type { WorkspacesPopoverProps } from '../components/workspaces-popover';
 
+
 // ----------------------------------------------------------------------
 
 export type NavContentProps = {
   data: {
-    path: string;
+    path?: string;
     title: string;
     icon: React.ReactNode;
     info?: React.ReactNode;
+   children?: Array<{
+      path?: string;
+      title?: string;
+    }>;
   }[];
   slots?: {
     topArea?: React.ReactNode;
@@ -116,7 +121,8 @@ export function NavMobile({
 
 export function NavContent({ data, slots, workspaces, sx }: NavContentProps) {
   const pathname = usePathname();
-
+  console.log(pathname);
+  
   return (
     <>
       <Logo />
@@ -135,8 +141,9 @@ export function NavContent({ data, slots, workspaces, sx }: NavContentProps) {
                 <ListItem disableGutters disablePadding key={item.title}>
                   <ListItemButton
                     disableGutters
+                    
                     component={RouterLink}
-                    href={item.path}
+                    href={item.path||'/default-path'}
                     sx={{
                       pl: 2,
                       py: 1,
@@ -144,7 +151,7 @@ export function NavContent({ data, slots, workspaces, sx }: NavContentProps) {
                       pr: 1.5,
                       borderRadius: 0.75,
                       typography: 'body2',
-                      fontWeight: 'fontWeightMedium',
+                      fontWeight: 'fontWeightMedium', 
                       color: 'var(--layout-nav-item-color)',
                       minHeight: 'var(--layout-nav-item-height)',
                       ...(isActived && {
