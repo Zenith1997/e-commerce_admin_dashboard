@@ -9,38 +9,53 @@ const icon = (name: string) => (
 
 export const navData = [
   {
-    title: 'Ordersss',
+    title: 'Orders',
     path: '/',
     icon: icon('ic-orders'),
   },
   {
-    title: 'User',
-    path: '/user',
+    title: 'Products',
+    path: '/products',
     icon: icon('ic-user'),
   },
   {
-    title: 'Product',
-    path: '/products',
-    icon: icon('ic-cart'),
-    info: (
-      <Label color="error" variant="inverted">
-        +3
-      </Label>
-    ),
+    title: 'Images',
+    path: '/images',
+    icon: icon('ic-user'),
+  },
+
+  {
+    title: 'Customers',
+    path: '/customers',
+    icon: icon('ic-user'),
   },
   {
-    title: 'Blog',
-    path: '/blog',
-    icon: icon('ic-blog'),
+    title: 'SMS',
+    path: '/customers',
+    icon: icon('ic-user'),
   },
   {
-    title: 'Sign in',
-    path: '/sign-in',
-    icon: icon('ic-lock'),
+    title: 'Settings',
+    icon: icon('ic-user'),
+    nested:true,
+    children:[
+      {
+        title: 'Item1',
+        path: '/',
+      },
+      {
+        title: 'Item2',
+        path: '/customers',
+      },
+      {
+        title: 'Item3',
+        path: '/customers',
+      }
+    ]
   },
   {
-    title: 'Not found',
-    path: '/404',
-    icon: icon('ic-disabled'),
-  },
+    title: 'User logs',
+    path: '/customers',
+    icon: icon('ic-user'),
+  }
 ];
