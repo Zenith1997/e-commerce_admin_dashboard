@@ -223,7 +223,7 @@ export const Logo = forwardRef<HTMLDivElement, LogoProps>(
         {...other}
       >
         {/* {isSingle ? singleLogo : fullLogo} */}
-        <Typography  variant ='h4' sx={{ textTransform:'uppercase',fontWeight:'bold'}}>janajaya</Typography>
+        <Typography  variant ='h4' sx={{ textTransform:'uppercase',fontWeight:'bold'}}>Lady Bug</Typography>
       </Box>
     );
   }

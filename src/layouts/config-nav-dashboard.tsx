@@ -37,17 +37,18 @@ export const navData = [
   {
     title: 'Settings',
     icon: icon('ic-user'),
+    nested:true,
     children:[
       {
-        title: 'HEy',
+        title: 'Item1',
         path: '/',
       },
       {
-        title: 'Settings',
+        title: 'Item2',
         path: '/customers',
       },
       {
-        title: 'Settings',
+        title: 'Item3',
         path: '/customers',
       }
     ]
